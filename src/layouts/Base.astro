@@ -1,0 +1,26 @@
+---
+import "../styles/style.css";
+import Header from "./Header.astro";
+
+interface Props {
+    title: string;
+    description?: string;
+    lang?: string;
+    keywords: string[];
+    defaultKeywords?: string[];
+}
+
+const { title, description, lang = "en-EN", keywords, defaultKeywords } = Astro.props;
+---
+
+<html lang={lang}>
+    <head>
+        <Header title={title} description={description} keywords={keywords} defaultKeywords={defaultKeywords} />
+        <slot name="head-slot" />
+    </head>
+
+    <body>
+        <slot name="body-slot" />
+        <slot />
+    </body>
+</html>
