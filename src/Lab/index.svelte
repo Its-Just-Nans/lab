@@ -23,10 +23,6 @@
     });
 </script>
 
-<svelte:head>
-    <title>lab - n4n5 pages</title>
-</svelte:head>
-
 <p>Right click to see menu</p>
 {#if $showMenu}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
