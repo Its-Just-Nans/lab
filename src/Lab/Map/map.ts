@@ -33,8 +33,8 @@ export const initMap = () => {
     }).addTo(map);
 };
 
-export const initCityMarkers = (adresses: any[]) => {
-    adresses.forEach((element) => {
+export const initCityMarkers = (addresses: any[]) => {
+    addresses.forEach((element) => {
         const [long, lat] = element.geometry.coordinates;
         const icon = element.visited ? ICONS.green : ICONS.blue;
         const m = L.marker([lat, long], { icon }).addTo(map);
